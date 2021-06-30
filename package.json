@@ -1,0 +1,19 @@
+{
+  "name": "bismuth_bodega",
+  "version": "1.0.0",
+  "description": "ann app used to store and update a bodega's produce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w9os/bismuth_bodega.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w9os/bismuth_bodega/issues"
+  },
+  "homepage": "https://github.com/w9os/bismuth_bodega#readme"
+}
