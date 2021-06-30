@@ -4,7 +4,9 @@
   "description": "ann app used to store and update a bodega's produce",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/w9os/bismuth_bodega/issues"
   },
-  "homepage": "https://github.com/w9os/bismuth_bodega#readme"
+  "homepage": "https://github.com/w9os/bismuth_bodega#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "inquirer": "^8.1.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "require": "^2.4.20",
+    "sequelize": "^6.6.4"
+  }
 }
