@@ -1,13 +1,20 @@
-const User = require('./User');
-const Project = require('./Project');
+// import models
+const Product = require('./Product');
+const Category = require('./Category');
+const Tag = require('./Tag');
+const ProductTag = require('./ProductTag');
 
-User.hasMany(Project, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-});
+// Products belongsTo Category
 
-Project.belongsTo(User, {
-  foreignKey: 'user_id'
-});
+// Categories have many Products
 
-module.exports = { User, Project };
+// Products belongToMany Tags (through ProductTag)
+
+// Tags belongToMany Products (through ProductTag)
+
+module.exports = {
+  Product,
+  Category,
+  Tag,
+  ProductTag,
+};
