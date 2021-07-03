@@ -15,12 +15,17 @@ Product.belongsTo(Category, {
 });
 
 Transaction.hasMany(Product, {
-  foreignKey:'product_id'
-})
+  foreignKey:{
+    name: 'product_id',
+    onDelete: 'CASCADE',
+}});
 
-Transaction.belongsTo(User, {
-  foreignKey: 'user_id',
-})
+
+Transaction.hasMany(User, {
+  foreignKey:{
+    name: 'user_id',
+    onDelete: 'CASCADE',
+}});
 
 
 module.exports = {

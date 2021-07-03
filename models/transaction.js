@@ -5,37 +5,29 @@ const sequelize = require('../config/connection');
 class Transaction extends Model {}
 Transaction.init ({
     id: {
-    type: DataType.INT,
+    type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true
     },
     product_id: {
-        type: DataType.INT,
-        references: {
-            model: 'product',
-            key: 'id',
-        }
+        type: DataTypes.INTEGER,
     },
     product_amount: {
-        type: DataType.INT,
+        type: DataTypes.INTEGER,
     },
-    product_price: {
-        type: DataType.DEC,
-        references: {
-            model: 'product',
-            key: 'price',
-        }
-    },
+   
     user_id: {
-        type: DataType.INT,
-        references: {
-            model: 'user',
-            key: 'id',
-        }
+        type: DataTypes.INTEGER,
+    }},
+    {
+        sequelize,
+        timestamps: true,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'transaction',
     }
-    
 
-})
+)
 
 module.exports = Transaction
