@@ -18,7 +18,7 @@ Category.init(
       allowNull: false
     },
     categoryimgurl: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING,
       allowNull: false
     }
   },
