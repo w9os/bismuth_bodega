@@ -6,26 +6,28 @@
                 <th>Product</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>total</th>
+
             </thead>
             <tbody>
+                {{#each products}}
                 <tr class="align-middle alert border-bottom" role="alert">
-                    <td class="text-center"> <img class="pic" width=80 src="https://www.freepnglogos.com/uploads/shoes-png/dance-shoes-png-transparent-dance-shoes-images-5.png" alt=""> </td>
-                    <td></td>
+                    <td class="text-center"> <img class="pic" width=80 src={{this.image_url}} alt=""> </td>
+                    <td>
                         <div>
-                            <p class="m-0 fw-bold">Sneakers Shoes 2020 For Men</p>
-                            <p class="m-0 text-muted">Fugiat Voluptates quasi nemo,ipsa perferencis</p>
+                            <p class="m-0 fw-bold">{{this.name}}</p>
+                            <p class="m-0 text-muted">Product description</p>
                         </div>
                     </td>
                     <td>
-                        <div class="fw-600">$44.99</div>
+                        <div class="fw-600">${{this.price}}</div>
                     </td>
-                    <td class="d-">5</td>
-                    <td> $89.98 </td>
-                    <td>
-                    </td>
+                    <td class="d-">{{this.quantity}}</td>
                 </tr>                
+                {{/each}}
+                
+
             </tbody>
         </table>
     </div>
 </div>
+

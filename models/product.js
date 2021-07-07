@@ -32,7 +32,10 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    
+    image_url: {
+      type: DataTypes. STRING,
+      allowNull: true,
+    },
   },
   {
     sequelize,
