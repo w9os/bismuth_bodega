@@ -2,36 +2,50 @@ const { Product } = require('../models');
 
 const productData = [
   {
-    product_name: 'Plain T-Shirt',
+    name: 'Bananas',
     price: 14.99,
-    stock: 14,
+    quantity: 14,
     category_id: 1,
+    image_url:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c137.png"
+  },  
+  {
+    name: 'apples',
+    price: 14.99,
+    quantity: 14,
+    category_id: 1,
+    image_url:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c137.png"
   },
   {
-    product_name: 'Running Sneakers',
-    price: 90.0,
-    stock: 25,
-    category_id: 5,
+    name: 'Fabuloso',
+    price: 14.99,
+    quantity: 14,
+    category_id: 1,
+    image_url:"https://www.fabuloso.com/content/dam/cp-sites/home-care/fabuloso/packshots/carousel-images/lavender/lavender-500ml.png"
   },
   {
-    product_name: 'Branded Baseball Hat',
-    price: 22.99,
-    stock: 12,
-    category_id: 4,
+    name: 'Rice',
+    price: 14.99,
+    quantity: 14,
+    category_id: 1,
+    image_url:"https://www.fabuloso.com/content/dam/cp-sites/home-care/fabuloso/packshots/carousel-images/lavender/lavender-500ml.png"
   },
   {
-    product_name: 'Top 40 Music Compilation Vinyl Record',
-    price: 12.99,
-    stock: 50,
-    category_id: 3,
+    name: 'Flour',
+    price: 14.99,
+    quantity: 14,
+    category_id: 1,
+    image_url:"https://www.fabuloso.com/content/dam/cp-sites/home-care/fabuloso/packshots/carousel-images/lavender/lavender-500ml.png"
   },
   {
-    product_name: 'Cargo Shorts',
-    price: 29.99,
-    stock: 22,
-    category_id: 2,
+    name: 'Sprite',
+    price: 14.99,
+    quantity: 14,
+    category_id: 1,
+    image_url:"https://www.fabuloso.com/content/dam/cp-sites/home-care/fabuloso/packshots/carousel-images/lavender/lavender-500ml.png"
   },
+
 ];
+
 
 const seedProducts = () => Product.bulkCreate(productData);
 
