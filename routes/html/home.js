@@ -5,10 +5,10 @@ module.exports = async (req, res, next) => {
     try {
         const products = await Product.findAll({})
         const productsData = products.map(prod => prod.get({ plain: true }))
-        console.log(productsData)
 
         //pass to template  
         res.render('home', { products: productsData })
+        console.log(req.session)
     } catch (err) { next(err) }
 };
 

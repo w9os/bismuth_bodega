@@ -4,18 +4,20 @@ const {User} = require('../../models');
 router.post('/', async (req, res) => {
     console.log('create user');
     try {
-    req.body.admin_user = req.body.admin_user === 'true' ? true: false;
+    req.body.admin_user = req.body.admin_user === '1' ? true: false;
 
       const userData = await User.create(req.body);
   
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.logged_in = true;
+       
   
         res.redirect('/');
       });
+      
     } catch (err) {
-        console.log('this catch');
+      console.log(err);
       res.status(400).json(err.message);
     }
   });
@@ -51,14 +53,16 @@ router.post('/', async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+
   
   router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
       req.session.destroy(() => {
-        res.status(204).end();
+        res.status(204).redirect('/login');
       });
     } else {
-      res.status(404).end();
+      res.status(404).redirect('/login');
     }
   });
   
