@@ -1,16 +1,22 @@
-Home page
-<hr/>
+logout partial:
+<div class="border mb-4 p-3">
+{{> logout }}
+</div>
 
-{{!-- login partial: --}}
-{{!-- {{> login-u}} --}}
+<h1>Bismuth Bodega</h1>
+<hr/>
 transaction form partial:
-{{> transaction-form}}
+<div class="border mb-4 p-3">
+    {{> transaction-form user_id=user_id}}
+</div>
 
 singup partial:
-{{> signup}}
-logout partial:
-{{> logout }}
-<hr>
-products
-{{> products-view }}
+<div class="border mb-4 p-3">
+    {{>signup}}
+</div>
 
+<hr>
+products:
+<div class="border mb-4 p-3">
+{{> products-view }}
+</div>
