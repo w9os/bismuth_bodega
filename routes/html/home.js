@@ -7,8 +7,8 @@ module.exports = async (req, res, next) => {
         const productsData = products.map(prod => prod.get({ plain: true }))
 
         //pass to template  
-        res.render('home', { products: productsData })
-        console.log(req.session)
+        res.render('home', { products: productsData, user_id: req.session.user_id })
+ 
     } catch (err) { next(err) }
 };
 
