@@ -2,17 +2,15 @@
 <div class="row">
     {{#each products}}
 <div class="col">
-    <div class="card" style="padding:5px; margin:5px" >
+    <div class="card" style="padding:5px; margin:5px max-height: 300px; max-width: 300px" >
     <div class="card-header">
-        <img src={{this.image_url}} style="width:10rem; margin:auto; display:block" />
+        <img src={{this.image_url}} style="max-height: 100px; max-width: 180px; margin:auto; display:block" />
     </div>
     <form action="/api/transaction" style="margin:auto" method="POST">
     <input type= "hidden" name="user_id" value="{{../user_id}}">
     <input type= "hidden" name="product_id" value="{{this.id}}">
-    <input type= "number" name="product_amount" value="1" style="width: 50px;font-size: 2rem; vertical-align: middle; padding: 5px;">
-        <button class="btn-primary" type="submit">
-            <div class="card-body">BUY</div>
-        </button>
+    <input type= "number" name="product_amount" value="1" style="width: 50px; font-size: 1rem; vertical-align: middle; padding: 5px; height: 30px">
+<button type="button" class="btn btn-primary btn-rounded" style="height: 30px; padding:5px">BUY</button>
     </form>
 </div>
 </div>
